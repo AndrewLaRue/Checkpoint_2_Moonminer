@@ -148,8 +148,64 @@
     </div>
   </header>
 
-  <!-- modal -->
 
+
+  <main class="container-fluid hero-img">
+
+    <!-- Fight zone upper -->
+    <div class="row upper-fight">
+      <div class="col-3 ps-0">
+        <marquee behavior="slide" direction="down">
+          <div class="shake pt-5 ps-3" id="chopperItem"></div>
+        </marquee>
+      </div>
+
+    </div>
+
+    <!-- Fight zone mid -->
+    <div class="row mid-fight">
+      <div class="col-3 offset-9 pe-0">
+        <marquee class="pe-0" behavior="slide" direction="">
+          <div id="sniperItem" class="shake
+          "></div>
+        </marquee>
+      </div>
+    </div>
+
+    <!-- Fight zone lower -->
+    <div class="row fixed-bottom">
+      <div class="col-4 position-fixed pe-0 ">
+        <div class="row justify-content-end">
+          <div class="col-12">
+
+            <img class="skull-cave" src="/assets/skullCave-removebg-preview.png" alt="">
+          </div>
+          <div id="mechItem" class="col-1 mb-0 fixed-bottom">
+            <img class="mech" src="/assets/staticMech.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-11 offset-1 d-flex justify-content-end ">
+        <marquee class="mar-marg no-select" behavior="" direction="">
+          <img class="zom-size mt-5" onclick="attack()" src="/assets/tickzombie.gif" alt="">
+          <img class="zom-size mt-0 " onclick="attack()" src="/assets/tickzombie.gif" alt="">
+          <img class="zom-size mt-3" onclick="attack()" src="/assets/tickzombie.gif" alt="">
+        </marquee>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="container-fluid text-danger text-center fixed-bottom">
+    <div class="row">
+      <div class="col-12 bg-dark">
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- modal -->
   <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl modal-content glass-fog text-end">
       <div class="modal-header border-0 d-flex justify-content-between fixed-top my-modal">
@@ -196,62 +252,6 @@
       </div>
     </div>
   </div>
-
-  <main class="container-fluid hero-img">
-
-    <!-- Fight zone upper -->
-    <div class="row upper-fight">
-      <div class="col-3 ps-0">
-        <marquee behavior="slide" direction="down">
-          <div class="shake pt-5 ps-3" id="chopperItem"></div>
-        </marquee>
-      </div>
-
-    </div>
-
-
-    <!-- Fight zone mid -->
-    <div class="row mid-fight">
-      <div class="col-3 offset-9 pe-0">
-        <marquee class="pe-0" behavior="slide" direction="">
-          <div id="sniperItem" class="shake
-          "></div>
-        </marquee>
-      </div>
-    </div>
-
-    <!-- Fight zone lower -->
-    <div class="row fixed-bottom">
-      <div class="col-4 position-fixed pe-0 ">
-        <div class="row justify-content-end">
-          <div class="col-12">
-
-            <img class="skull-cave" src="/assets/skullCave-removebg-preview.png" alt="">
-          </div>
-          <div id="mechItem" class="col-1 mb-0 fixed-bottom">
-            <img class="mech" src="/assets/staticMech.png" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="col-11 offset-1 d-flex justify-content-end ">
-        <marquee class="mar-marg no-select" behavior="" direction="">
-          <img class="zom-size mt-5" onclick="attack()" src="/assets/tickzombie.gif" alt="">
-          <img class="zom-size mt-0 " onclick="attack()" src="/assets/tickzombie.gif" alt="">
-          <img class="zom-size mt-3" onclick="attack()" src="/assets/tickzombie.gif" alt="">
-        </marquee>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="container-fluid text-danger text-center fixed-bottom">
-    <div class="row">
-      <div class="col-12 bg-dark">
-      </div>
-
-    </div>
-  </footer>
-
 
   <!-- Script links -->
   <section>

@@ -108,6 +108,40 @@ function update() {
   
 }
 
+//#region Avatar
+
+function drawMech() {
+  // @ts-ignore
+  document.getElementById('mechItem').innerHTML = `
+              <img class="mech" src="/assets/Mech.gif" alt="">
+  `
+}
+function deanimateAttack() {
+  // @ts-ignore
+  document.getElementById('mechItem').innerHTML = `
+  <img class="mech" src="/assets/staticMech.png" alt="">
+  `
+}
+
+//#endregion
+
+//#region Attacks
+
+function autoAttack() {
+  army.gold += army.autoPower
+
+  update()
+}
+
+function attack() {
+  army.gold += army.attackPower
+  // animateAttack()
+  drawMech()
+  update()
+}
+
+//#endregion
+
 //#region Click upgrades
 
 function buyAp() {
@@ -181,35 +215,6 @@ function drawSniper() {
 
 //#endregion
 
-//#region Attacks
-
-function autoAttack() {
-  army.gold += army.autoPower
-
-  update()
-}
-
-function attack() {
-  army.gold += army.attackPower
-  // animateAttack()
-  drawMech()
-  update()
-}
-
-function deanimateAttack() {
-  // @ts-ignore
-  document.getElementById('mechItem').innerHTML = `
-  <img class="mech" src="/assets/staticMech.png" alt="">
-  `
-}
-
-function drawMech() {
-  // @ts-ignore
-  document.getElementById('mechItem').innerHTML = `
-              <img class="mech" src="/assets/Mech.gif" alt="">
-  `
-}
-//#endregion
 
 startGame()
 
