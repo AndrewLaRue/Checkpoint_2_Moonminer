@@ -48,7 +48,7 @@ body {
 }
 
 .title-bright {
-  filter: brightness(75%);
+  filter: brightness(50%);
 }
 
 .upper-fight {
@@ -124,7 +124,7 @@ body {
 .skull-cave {
   height: 25em;
   transform: translateY(-14.6875em);
-  filter: brightness(60%);
+  filter: brightness(50%);
 }
 
 .zom-size {
@@ -132,6 +132,8 @@ body {
   user-select: none;
   cursor: url(assets/cursor\ \(2\).cur), crosshair;
   filter: brightness(75%);
+  padding-left: 0%;
+  padding-right: 0%;
 }
 
 .mech {
