@@ -1,3 +1,4 @@
+/* Utility classes*/
 .back-transparent {
   background-color: transparent !important;
 }
@@ -7,17 +8,10 @@ body {
   background-position: center;
   background-size: cover;
   background-image: url(/assets/lightningBackground.gif);
-
 }
 
 * {
   font-family: 'Black Ops One', cursive;
-}
-
-.img-text {
-  /* text-shadow: 1px 1px 2px rgb(0, 0, 0); */
-  color: rgb(173, 173, 173);
-  text-shadow: 1px 1px 1px black;
 }
 
 .glass-fog {
@@ -27,10 +21,51 @@ body {
   backdrop-filter: blur(20px);
 }
 
-.skull-cave {
-  height: 25em;
-  transform: translateY(-14.6875em);
-  filter: brightness(60%);
+.mar-marg {
+  margin-left: 8em;
+}
+
+.my-modal {
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.selectable:hover {
+  background-color: rgb(72, 72, 72) !important;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.bigSelectable:hover {
+  background-color: rgb(20, 20, 20) !important;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.title-bright {
+  filter: brightness(75%);
+}
+
+.upper-fight {
+  height: 55vh;
+}
+
+.mid-fight {
+  height: 30vh;
+}
+
+/*  */
+/* Sprite mods */
+/*  */
+
+.img-text {
+  color: rgb(173, 173, 173);
+  text-shadow: 1px 1px 1px black;
 }
 
 .shake {
@@ -86,23 +121,10 @@ body {
   }
 }
 
-.mar-marg {
-  margin-left: 8em;
-}
-
-.my-modal {
-  display: flex;
-  justify-content: space-between;
-  width: inherit;
-}
-
-.item-dark {
-  filter: brightness(50%);
-
-}
-
-.mech {
-  height: 8em;
+.skull-cave {
+  height: 25em;
+  transform: translateY(-14.6875em);
+  filter: brightness(60%);
 }
 
 .zom-size {
@@ -112,37 +134,21 @@ body {
   filter: brightness(75%);
 }
 
-.no-select {
-  user-select: none;
+.mech {
+  height: 8em;
+  filter: brightness(50%);
 }
 
-.ally-size {
-  height: 14.0625em;
-  /* filter: brightness(50%) */
+.chopper-size {
+  height: 13em;
 }
 
-.move-sniper {
-  transform: translateY(5em);
-}
-
-.selectable:hover {
-  background-color: rgb(72, 72, 72) !important;
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.bigSelectable:hover {
-  background-color: rgb(20, 20, 20) !important;
-  transform: scale(1.05);
-  cursor: pointer;
+.sniper-size {
+  height: 10em;
 }
 
 .img-queen {
   width: 50vw;
-}
-
-.title-bright {
-  filter: brightness(75%);
 }
 
 .coin-size {
@@ -151,12 +157,4 @@ body {
 
 .coin-size-sm {
   height: 1em;
-}
-
-.upper-fight {
-  height: 40vh;
-}
-
-.mid-fight {
-  height: 30vh;
 }

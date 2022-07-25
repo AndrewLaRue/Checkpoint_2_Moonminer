@@ -1,5 +1,6 @@
 
 //#region Variables
+
 const gold = document.getElementById('gold')
 // const wave = document.getElementById('wave')
 
@@ -67,8 +68,6 @@ update()
 
 setInterval(deanimateAttack, 1000)
 setInterval(autoAttack, 3000)
-// deanimateAttack()
-
 }
 
 function update() {
@@ -93,7 +92,7 @@ function update() {
   // @ts-ignore
   chopper.innerHTML = chopperPay
   // @ts-ignore
-  chopperLevel.innerHTML = chopper.level - 1
+  chopperLevel.innerHTML = chopperSprite.level - 1
 
   // @ts-ignore
   sniper.innerHTML = sniperPay
@@ -112,7 +111,7 @@ function update() {
 //#region Click upgrades
 
 function buyAp() {
-  console.log('piercing');
+  // console.log('piercing');
   if (army.gold >= piercing.cost * piercing.level) {
     let ap = piercing.cost *= piercing.level
     piercing.level++
@@ -155,7 +154,7 @@ function drawChopper() {
 // console.log('draw chopper');
     // @ts-ignore
   document.getElementById('chopperItem').innerHTML = `
-          <img class="ally-size" src="/assets/betterHelicopter.webp" alt="">
+          <img class="chopper-size" src="/assets/betterHelicopter.webp" alt="">
   ` 
 }
 
@@ -176,7 +175,7 @@ function drawSniper() {
   // console.log('draw sniper');
   // @ts-ignore
   document.getElementById('sniperItem').innerHTML = `
-          <img class="ally-size" src="/assets/sniper.gif" alt="">
+          <img class="sniper-size" src="/assets/sniper.gif" alt="">
   `
 }
 
@@ -211,10 +210,11 @@ function drawMech() {
   `
 }
 //#endregion
-// drawChopper()
-// drawSniper()
+
 startGame()
 
+// drawChopper()
+// drawSniper()
 
 
 
