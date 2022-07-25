@@ -58,10 +58,10 @@
                   <div class="col-5 text-center pt-2">
                     <div class="row">
                       <div class="col-6" title=" Chopper Level">
-                        <p>Chopper<br><span id="flamethrowerLevel"></span> </p>
+                        <p>Chopper<br><span id="chopperLevel"></span> </p>
                       </div>
                       <div class="col-6" title="Sniper Level">
-                        <p>Sniper<br><span id="turretLevel"></span> </p>
+                        <p>Sniper<br><span id="sniperLevel"></span> </p>
                       </div>
                     </div>
                   </div>
@@ -127,13 +127,13 @@
                       </div>
                     </div>
                     <div class="row text-center justify-content-around img-text">
-                      <div class="col-5 me-2 selectable border border-3 border-dark rounded" onclick="buyFlame()">
-                        <p class="my-1">Chopper<br> <span id="flamethrower">50</span><img class="coin-size-sm"
+                      <div class="col-5 me-2 selectable border border-3 border-dark rounded" onclick="buyChopper()">
+                        <p class="my-1">Chopper<br> <span id="chopper">50</span><img class="coin-size-sm"
                             src="/assets/cap.png" alt=""></p>
                         <p class="my-1">Auto +3</p>
                       </div>
-                      <div class="col-5 selectable border border-3 border-dark rounded" onclick="buyTurret()">
-                        <p class="my-1">Sniper<br> <span id="turret">150</span><img class="coin-size-sm"
+                      <div class="col-5 selectable border border-3 border-dark rounded" onclick="buySniper()">
+                        <p class="my-1">Sniper<br> <span id="sniper">150</span><img class="coin-size-sm"
                             src="/assets/cap.png" alt=""></p>
                         <p class="my-1">Auto +5</p>
                       </div>
@@ -203,10 +203,10 @@
     <div class="row upper-fight">
       <div class="col-3 ps-0">
         <marquee behavior="slide" direction="down">
-          <div class="shake pt-5 ps-3" id="flameItem"></div>
+          <div class="shake pt-5 ps-3" id="chopperItem"></div>
         </marquee>
       </div>
-      <!-- <img class="char-size mt-2" id="flameItem" src="/assets/hellicopter.gif" alt=""> -->
+
     </div>
 
 
@@ -214,7 +214,7 @@
     <div class="row mid-fight">
       <div class="col-3 offset-9 pe-0">
         <marquee class="pe-0" behavior="slide" direction="">
-          <div id="turretItem" class="shake gun-size move-sniper
+          <div id="sniperItem" class="shake move-sniper
           "></div>
         </marquee>
       </div>
@@ -228,7 +228,7 @@
 
             <img class="skull-cave" src="/assets/skullCave-removebg-preview.png" alt="">
           </div>
-          <div id="mechItem" class="col-1 mb-0 fixed-bottom char-size">
+          <div id="mechItem" class="col-1 mb-0 fixed-bottom item-dark">
             <img class="mech" src="/assets/staticMech.png" alt="">
           </div>
         </div>

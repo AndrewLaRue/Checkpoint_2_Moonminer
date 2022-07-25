@@ -16,11 +16,11 @@ const rapidFire = document.getElementById('rapidFire')
 const rapidFireLevel = document.getElementById('rapidFireLevel')
 
 // auto upgrades
-const flamethrower = document.getElementById('flamethrower')
-const flamethrowerLevel = document.getElementById('flamethrowerLevel')
+const chopper = document.getElementById('chopper')
+const chopperLevel = document.getElementById('chopperLevel')
 
-const turret = document.getElementById('turret')
-const turretLevel = document.getElementById('turretLevel')
+const sniper = document.getElementById('sniper')
+const sniperLevel = document.getElementById('sniperLevel')
 //#endregion
 
 //#region Objects
@@ -49,13 +49,13 @@ const rapid = {
   attack: 2
 }
 
-const flame = {
+const chopperSprite = {
   cost: 200,
   level: 1,
   attack: 3
 }
 
-const turr = {
+const sniperSprite = {
   cost: 500,
   level: 1,
   attack: 5
@@ -74,36 +74,31 @@ setInterval(autoAttack, 3000)
 function update() {
   let ap = piercing.cost * piercing.level
   let rap = rapid.cost * rapid.level
-  let fla = flame.cost * flame.level
-  let tur = turr.cost * turr.level
-
+  let chopperPay = chopperSprite.cost * chopperSprite.level
+  let sniperPay = sniperSprite.cost * sniperSprite.level
 
   // @ts-ignore
   gold.innerHTML = army.gold
-
 
   // @ts-ignore
   armorPiercing.innerHTML = ap
   // @ts-ignore
   armorPiercingLevel.innerHTML = piercing.level - 1
 
-
   // @ts-ignore
   rapidFire.innerHTML = rap
   // @ts-ignore
   rapidFireLevel.innerHTML = rapid.level - 1
 
+  // @ts-ignore
+  chopper.innerHTML = chopperPay
+  // @ts-ignore
+  chopperLevel.innerHTML = chopper.level - 1
 
   // @ts-ignore
-  flamethrower.innerHTML = fla
+  sniper.innerHTML = sniperPay
   // @ts-ignore
-  flamethrowerLevel.innerHTML = flame.level - 1
-
-
-  // @ts-ignore
-  turret.innerHTML = tur
-  // @ts-ignore
-  turretLevel.innerHTML = turr.level - 1
+  sniperLevel.innerHTML = sniperSprite.level - 1
 
 
 
@@ -143,45 +138,45 @@ function buyRf() {
 
 //#region Auto upgrades
 
-function buyFlame() {
-  // console.log('flame on');
-  if (army.gold >= flame.cost * turr.level) {
-    let fla = flame.cost *= flame.level
-    flame.level++
-    army.gold -= fla
-    flame.cost = fla
-    army.autoPower += flame.attack
-    drawFlame()
+function buyChopper() {
+  // console.log('chopper on');
+  if (army.gold >= chopperSprite.cost * chopperSprite.level) {
+    let chopperPay = chopperSprite.cost *= chopperSprite.level
+    chopperSprite.level++
+    army.gold -= chopperPay
+    chopperSprite.cost = chopperPay
+    army.autoPower += chopperSprite.attack
+    drawChopper()
   }
   update()
 }
 
-function drawFlame() {
-// console.log('draw flame');
+function drawChopper() {
+// console.log('draw chopper');
     // @ts-ignore
-  document.getElementById('flameItem').innerHTML = `
-          <img class="gun-size" src="/assets/betterHelicopter.webp" alt="">
+  document.getElementById('chopperItem').innerHTML = `
+          <img class="ally-size" src="/assets/betterHelicopter.webp" alt="">
   ` 
 }
 
-function buyTurret() {
-  // console.log('turret obtained');
-  if (army.gold >= turr.cost * turr.level) {
-    let tur = turr.cost *= turr.level
-    turr.level++
-    army.gold -= tur
-    turr.cost = tur
-    army.autoPower += turr.attack
-    drawTurret()
+function buySniper() {
+  // console.log('sniper obtained');
+  if (army.gold >= sniperSprite.cost * sniperSprite.level) {
+    let sniperPay = sniperSprite.cost *= sniperSprite.level
+    sniperSprite.level++
+    army.gold -= sniperPay
+    sniperSprite.cost = sniperPay
+    army.autoPower += sniperSprite.attack
+    drawSniper()
   }
   update()
 }
 
-function drawTurret() {
-  // console.log('draw turret');
+function drawSniper() {
+  // console.log('draw sniper');
   // @ts-ignore
-  document.getElementById('turretItem').innerHTML = `
-          <img class="gun-size" src="/assets/sniper.gif" alt="">
+  document.getElementById('sniperItem').innerHTML = `
+          <img class="ally-size" src="/assets/sniper.gif" alt="">
   `
 }
 
@@ -216,8 +211,8 @@ function drawMech() {
   `
 }
 //#endregion
-// drawFlame()
-// drawTurret()
+// drawChopper()
+// drawSniper()
 startGame()
 
 

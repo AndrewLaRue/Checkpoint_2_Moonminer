@@ -27,21 +27,9 @@ body {
   backdrop-filter: blur(20px);
 }
 
-
-.no-padding {
-  padding: 0% !important;
-}
-
-
-
 .skull-cave {
   height: 25em;
   transform: translateY(-14.6875em);
-  filter: brightness(60%);
-}
-
-.pod-size {
-  height: 12.5em;
   filter: brightness(60%);
 }
 
@@ -102,23 +90,13 @@ body {
   margin-left: 8em;
 }
 
-.chopper-mar {
-  width: 25vw;
-}
-
 .my-modal {
   display: flex;
   justify-content: space-between;
   width: inherit;
 }
 
-.no-round {
-  border-top-left-radius: 0% !important;
-  border-top-right-radius: 0% !important;
-  padding: 1% !important;
-}
-
-.char-size {
+.item-dark {
   filter: brightness(50%);
 
 }
@@ -138,13 +116,9 @@ body {
   user-select: none;
 }
 
-.gun-size {
+.ally-size {
   height: 14.0625em;
   /* filter: brightness(50%) */
-}
-
-.inherit-width {
-  width: inherit;
 }
 
 .move-sniper {
@@ -177,16 +151,6 @@ body {
 
 .coin-size-sm {
   height: 1em;
-}
-
-.text-img {
-  text-shadow: 1px 1px 2px whitesmoke;
-}
-
-marquee {
-  user-select: none;
-  /* transform: translateY(10px); */
-  /* transform: translateX(-100px); */
 }
 
 .upper-fight {
