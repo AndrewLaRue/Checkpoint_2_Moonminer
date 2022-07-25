@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>~DeadMen Walking~</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body class="her-img">
+
+  <header class="container-fluid">
+    <div class="row">
+      <!-- accordion -->
+      <div class="col-6 offset-3 fixed-top text-center back-transparent  title-bright">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item back-transparent border-0">
+            <h1 class="accordion-header back-transparent text-center" id="panelsStayOpen-headingOne">
+              <button class="collapsed border-0 back-transparent text-center bigSelectable rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne">
+                <img class="img-fluid" src="/assets/bonetitle.png" alt="">
+              </button>
+            </h1>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingOne">
+              <div class="m-0 p-0 container accordion-body border-0">
+                <!-- body -->
+                <section class="row rounded img-text pb-0">
+                  <div class=" col-5 text-center pt-2">
+                    <div class="row">
+                      <div class="col-6" title="Accuracy Level">
+                        <p>Accuracy<br><span id="armorPiercingLevel"></span> </p>
+                      </div>
+                      <div class="col-6" title="Rapid Fire Level">
+                        <p>Rapid Fire<br><span id="rapidFireLevel"></span> </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2 d-flex align-items-center justify-content-center">
+                    <button type="button"
+                      class="btn rounded text-secondary border border-secondary border-2 bigSelectable"
+                      data-bs-toggle="modal" data-bs-target="#infoModal">
+                      Info
+                    </button>
+                  </div>
+                  <div class="col-5 text-center pt-2">
+                    <div class="row">
+                      <div class="col-6" title=" Chopper Level">
+                        <p>Chopper<br><span id="flamethrowerLevel"></span> </p>
+                      </div>
+                      <div class="col-6" title="Sniper Level">
+                        <p>Sniper<br><span id="turretLevel"></span> </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item back-transparent border-0">
+            <h2 class="accordion-header back-transparent border-0 d-flex justify-content-around"
+              id="panelsStayOpen-headingTwo">
+              <button class="container collapsed back-transparent border-0 rounded bigSelectable" type="button"
+                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                <div
+                  class="row rounded text-center justify-content-around align-items-center back-transparent img-text rounded-top">
+                  <div class="col-3">
+                    <p class=" fs-6 pb-0 mb-0" title="Gold per click">Attack Power</p>
+                    <h3 id="clickTotal" class="pb-0 mb-0" title="Gold per click"></h3>
+                  </div>
+                  <div class="col-3">
+                    <div class="d-flex justify-content-center align-items-center pt-1 pb-0">
+                      <h1 id="gold" class=" mb-0">0</h1>
+                      <img class="coin-size" src="/assets/cap.png" alt="">
+                    </div>
+                    <!-- <p class=" fs-6 pb-0 mb-0 me-2">Wave: <span id="wave">1</span></p> -->
+                  </div>
+                  <div class="col-3">
+                    <p class=" fs-6 pb-0 mb-0" title="gold every 3 seconds">Auto Power</p>
+                    <h3 id="autoTotal" class="pb-0 mb-0" title="gold every 3 seconds"></h3>
+                  </div>
+                </div>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse back-transparent border-0"
+              aria-labelledby="panelsStayOpen-headingTwo">
+              <div class="container accordion-body pt-0 back-transparent border-0">
+                <!-- body 2 -->
+                <div class="row rounded">
+                  <div class="col-6">
+                    <div class="row">
+                      <div class="col-12 pt-2">
+                        <h5 class="text-center img-text">Weapon Upgrades</h5>
+                      </div>
+                    </div>
+                    <div class="row text-center justify-content-around img-text">
+                      <div class="col-5  selectable border border-3 border-dark rounded" onclick="buyAp()">
+                        <p class="my-1">Accuracy<br> <span id="armorPiercing"></span><img class="coin-size-sm"
+                            src="/assets/cap.png" alt=""></p>
+                        <p class="my-1">Attack +1</p>
+                      </div>
+                      <div class="col-5 selectable border border-3 border-dark rounded" onclick="buyRf()">
+                        <p class="my-1">Rapid Fire<br> <span id="rapidFire"></span><img class="coin-size-sm"
+                            src="/assets/cap.png" alt=""></p>
+                        <p class="my-1">Attack +2</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Auto Upgrades -->
+                  <div class="col-6">
+                    <div class="row">
+                      <div class="col-12 pt-2">
+                        <h5 class="text-center img-text">Auto Upgrades</h5>
+                      </div>
+                    </div>
+                    <div class="row text-center justify-content-around img-text">
+                      <div class="col-5 me-2 selectable border border-3 border-dark rounded" onclick="buyFlame()">
+                        <p class="my-1">Chopper<br> <span id="flamethrower">50</span><img class="coin-size-sm"
+                            src="/assets/cap.png" alt=""></p>
+                        <p class="my-1">Auto +3</p>
+                      </div>
+                      <div class="col-5 selectable border border-3 border-dark rounded" onclick="buyTurret()">
+                        <p class="my-1">Sniper<br> <span id="turret">150</span><img class="coin-size-sm"
+                            src="/assets/cap.png" alt=""></p>
+                        <p class="my-1">Auto +5</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- modal -->
+
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-content glass-fog text-end">
+      <div class="modal-header border-0 d-flex justify-content-between fixed-top my-modal">
+        <button type="button" class="btn-close bg-secondary selectable" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <img class="img-queen" src="/assets/queen.webp" alt="">
+        <br><br>
+        <p class="text-start img-text">In the not too distant future, mankind has been assaulted by zombie parasites
+          from another
+          dimension!<br>
+          <br>
+          Our once mighty world has been brought to its knees. Only you can stop these monsters from taking the
+          last<br>
+          of humanity to feed their queen.<br>
+          <br>
+          Collect caps to fund the war effort and use them to improve your arsenal. Collect enough and you may even
+          be<br>
+          able to coax other survivors out of hiding.<br>
+          <br>
+          Be careful, once their queen has gained enough strength, nothing can stop her!
+        </p>
+        <section class="contaner">
+          <div class="row fixed-bottom text-center justify-content-around">
+
+            <div class="col-4 ">
+              <img class="mt-5" src="assets/oldguy.webp" alt="">
+              <img class="mt-5" src="/assets/woman.webp" alt="">
+              <img class="mt-5" src="/assets/man.webp" alt="">
+            </div>
+            <div class="col-4">
+              <img class="pt-4" src="/assets/zombie creation.gif" alt="">
+            </div>
+            <div class="col-4">
+              <img class="pt-4" src="/assets/brainbug.gif" alt="">
+              <img class="pt-4" src="/assets/brainbug.gif" alt="">
+              <img class="pt-4" src="/assets/brainbug.gif" alt="">
+              <img class="pt-4" src="/assets/brainbug.gif" alt="">
+            </div>
+          </div>
+        </section>
+        <!-- body -->
+      </div>
+    </div>
+  </div>
+
+  <main class="container-fluid hero-img">
+
+    <!-- Fight zone upper -->
+    <div class="row upper-fight">
+      <div class="col-3 ps-0">
+        <marquee behavior="slide" direction="down">
+          <div class="shake pt-5 ps-3" id="flameItem"></div>
+        </marquee>
+      </div>
+      <!-- <img class="char-size mt-2" id="flameItem" src="/assets/hellicopter.gif" alt=""> -->
+    </div>
+
+
+    <!-- Fight zone mid -->
+    <div class="row mid-fight">
+      <div class="col-3 offset-9 pe-0">
+        <marquee class="pe-0" behavior="slide" direction="">
+          <div id="turretItem" class="shake gun-size move-sniper
+          "></div>
+        </marquee>
+      </div>
+    </div>
+
+    <!-- Fight zone lower -->
+    <div class="row fixed-bottom">
+      <div class="col-4 position-fixed pe-0 ">
+        <div class="row justify-content-end">
+          <div class="col-12">
+
+            <img class="skull-cave" src="/assets/skullCave-removebg-preview.png" alt="">
+          </div>
+          <div class="col-1 mb-0 fixed-bottom char-size">
+            <img src="/assets/Mech.gif" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-11 offset-1 d-flex justify-content-end ">
+        <marquee class="mar-marg" behavior="" direction="">
+          <img class="zom-size px-3 mt-5" onclick="attack()" src="/assets/tickzombie.gif" alt="">
+          <img class="zom-size px-3 mt-0 " onclick="attack()" src="/assets/tickzombie.gif" alt="">
+          <img class="zom-size px-3 mt-3" onclick="attack()" src="/assets/tickzombie.gif" alt="">
+        </marquee>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid text-danger text-center fixed-bottom">
+    <div class="row">
+      <div class="col-12 bg-dark">
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Script links -->
+  <section>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"></script>
+  </section>
+</body>
+
+</html>

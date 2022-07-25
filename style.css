@@ -1,0 +1,189 @@
+.back-transparent {
+  background-color: transparent !important;
+}
+
+body {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/assets/lightningBackground.gif);
+
+}
+
+* {
+  font-family: 'Black Ops One', cursive;
+}
+
+.img-text {
+  /* text-shadow: 1px 1px 2px rgb(0, 0, 0); */
+  color: rgb(173, 173, 173);
+  text-shadow: 1px 1px 1px black;
+}
+
+.glass-fog {
+  /* background: transparent !important; */
+  background: rgba(13, 13, 13, 0.4) !important;
+  /* border: 1px solid #f4f4f4; */
+  backdrop-filter: blur(20px);
+}
+
+
+.no-padding {
+  padding: 0% !important;
+}
+
+
+
+.skull-cave {
+  height: 25em;
+  transform: translateY(-14.6875em);
+  filter: brightness(60%);
+}
+
+.pod-size {
+  height: 12.5em;
+  filter: brightness(60%);
+}
+
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  filter: brightness(60%);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.mar-marg {
+  margin-left: 6.25em;
+}
+
+.chopper-mar {
+  width: 25vw;
+}
+
+.my-modal {
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.no-round {
+  border-top-left-radius: 0% !important;
+  border-top-right-radius: 0% !important;
+  padding: 1% !important;
+}
+
+.char-size {
+  filter: brightness(50%);
+}
+
+.zom-size {
+  height: 6.25em;
+  user-select: none;
+  cursor: url(assets/cursor\ \(2\).cur), crosshair;
+  filter: brightness(75%);
+}
+
+.gun-size {
+  height: 14.0625em;
+  /* filter: brightness(50%) */
+}
+
+.inherit-width {
+  width: inherit;
+}
+
+.move-sniper {
+  transform: translateY(5em);
+}
+
+.selectable:hover {
+  background-color: rgb(72, 72, 72) !important;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.bigSelectable:hover {
+  background-color: rgb(20, 20, 20) !important;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.img-queen {
+  width: 50vw;
+}
+
+.title-bright {
+  filter: brightness(75%);
+}
+
+.coin-size {
+  height: 1em;
+}
+
+.coin-size-sm {
+  height: 1em;
+}
+
+.text-img {
+  text-shadow: 1px 1px 2px whitesmoke;
+}
+
+marquee {
+  user-select: none;
+  /* transform: translateY(10px); */
+  /* transform: translateX(-100px); */
+}
+
+.upper-fight {
+  height: 40vh;
+}
+
+.mid-fight {
+  height: 30vh;
+}
