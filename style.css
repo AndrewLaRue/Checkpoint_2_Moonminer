@@ -99,7 +99,7 @@ body {
 }
 
 .mar-marg {
-  margin-left: 6.25em;
+  margin-left: 8em;
 }
 
 .chopper-mar {
@@ -120,6 +120,11 @@ body {
 
 .char-size {
   filter: brightness(50%);
+
+}
+
+.mech {
+  height: 8em;
 }
 
 .zom-size {
@@ -127,6 +132,10 @@ body {
   user-select: none;
   cursor: url(assets/cursor\ \(2\).cur), crosshair;
   filter: brightness(75%);
+}
+
+.no-select {
+  user-select: none;
 }
 
 .gun-size {

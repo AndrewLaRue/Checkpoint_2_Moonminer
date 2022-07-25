@@ -1,7 +1,9 @@
 
 //#region Variables
 const gold = document.getElementById('gold')
-const wave = document.getElementById('wave')
+// const wave = document.getElementById('wave')
+
+// const mechItem = document.getElementById('mechItem')
 
 // click upgrades
 const clickTotal = document.getElementById('clickTotal')
@@ -60,6 +62,14 @@ const turr = {
 }
 //#endregion
 
+function startGame() {
+update()
+
+setInterval(deanimateAttack, 1000)
+setInterval(autoAttack, 3000)
+// deanimateAttack()
+
+}
 
 function update() {
   let ap = piercing.cost * piercing.level
@@ -152,7 +162,6 @@ function drawFlame() {
   document.getElementById('flameItem').innerHTML = `
           <img class="gun-size" src="/assets/betterHelicopter.webp" alt="">
   ` 
-
 }
 
 function buyTurret() {
@@ -188,24 +197,25 @@ function autoAttack() {
 
 function attack() {
   army.gold += army.attackPower
-
+  // animateAttack()
+  drawMech()
   update()
 }
 
-//#endregion
-
-function zombieWave() {
-  zombie.wave++
+function deanimateAttack() {
   // @ts-ignore
-  wave.innerHTML = zombie.wave
+  document.getElementById('mechItem').innerHTML = `
+  <img class="mech" src="/assets/staticMech.png" alt="">
+  `
 }
 
-function startGame() {
-update()
-
-setInterval(autoAttack, 3000)
-setInterval(zombieWave, 17950)
+function drawMech() {
+  // @ts-ignore
+  document.getElementById('mechItem').innerHTML = `
+              <img class="mech" src="/assets/Mech.gif" alt="">
+  `
 }
+//#endregion
 // drawFlame()
 // drawTurret()
 startGame()
