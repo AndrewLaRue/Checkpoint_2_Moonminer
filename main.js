@@ -113,13 +113,13 @@ function update() {
 function drawMech() {
   // @ts-ignore
   document.getElementById('mechItem').innerHTML = `
-              <img class="mech" src="/assets/Mech.gif" alt="">
+              <img class="mech" src="assets/Mech.gif" alt="">
   `
 }
 function deanimateAttack() {
   // @ts-ignore
   document.getElementById('mechItem').innerHTML = `
-  <img class="mech" src="/assets/staticMech.png" alt="">
+  <img class="mech" src="assets/staticMech.png" alt="">
   `
 }
 
@@ -188,7 +188,7 @@ function drawChopper() {
 // console.log('draw chopper');
     // @ts-ignore
   document.getElementById('chopperItem').innerHTML = `
-          <img class="chopper-size" src="/assets/betterHelicopter.webp" alt="">
+          <img class="chopper-size" src="assets/betterHelicopter.webp" alt="">
   ` 
 }
 
@@ -209,7 +209,7 @@ function drawSniper() {
   // console.log('draw sniper');
   // @ts-ignore
   document.getElementById('sniperItem').innerHTML = `
-          <img class="sniper-size" src="/assets/sniper.gif" alt="">
+          <img class="sniper-size" src="assets/sniper.gif" alt="">
   `
 }
 
