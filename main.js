@@ -27,15 +27,30 @@ const sniperLevel = document.getElementById('sniperLevel')
 //#region Objects
 const army = {
   attackPower: 1,
-  autoPower:0,
+  autoPower: 0,
   gold: 0,
 
 }
 
-const zombie = {
+const zombie1 = {
   health: 10,
   wave: 1,
   level: 1,
+  defeated: false
+}
+
+const zombie2 = {
+  health: 10,
+  wave: 1,
+  level: 1,
+  defeated: false
+}
+
+const zombie3 = {
+  health: 10,
+  wave: 1,
+  level: 1,
+  defeated: false
 }
 
 const piercing = {
@@ -64,10 +79,10 @@ const sniperSprite = {
 //#endregion
 
 function startGame() {
-update()
+  update()
 
-setInterval(deanimateAttack, 1000)
-setInterval(autoAttack, 3000)
+  setInterval(deanimateAttack, 1000)
+  setInterval(autoAttack, 3000)
 }
 
 function update() {
@@ -105,7 +120,7 @@ function update() {
   clickTotal.innerHTML = army.attackPower
   // @ts-ignore
   autoTotal.innerHTML = army.autoPower
-  
+
 }
 
 //#region Avatar
@@ -133,7 +148,28 @@ function autoAttack() {
   update()
 }
 
-function attack() {
+function attack(num) {
+  // @ts-ignore
+  if (num == 1) {
+    zombie1.health--
+    console.log('zombie 1 health', zombie1.health);
+    console.log('zombie', zombie1);
+    if (zombie1.health == 0) {
+      zombie1.defeated == true
+    }
+    if (zombie1.defeated = true) {
+
+      // document.getElementById('zombie1').innerHTML = '<img class="mech" src="assets/Mech.gif" alt="">'
+    }
+  }
+  if (num == 2) {
+    zombie2.health--
+    console.log('zombie 2 health', zombie2.health);
+  }
+  if (num == 3) {
+    zombie3.health--
+    console.log('zombie 3 health', zombie3.health);
+  }
   army.gold += army.attackPower
   // animateAttack()
   drawMech()
@@ -185,11 +221,11 @@ function buyChopper() {
 }
 
 function drawChopper() {
-// console.log('draw chopper');
-    // @ts-ignore
+  // console.log('draw chopper');
+  // @ts-ignore
   document.getElementById('chopperItem').innerHTML = `
           <img class="chopper-size" src="assets/betterHelicopter.webp" alt="">
-  ` 
+  `
 }
 
 function buySniper() {
