@@ -151,25 +151,36 @@ function autoAttack() {
 function attack(num) {
   // @ts-ignore
   if (num == 1) {
-    zombie1.health--
+    zombie1.health -= army.attackPower
     console.log('zombie 1 health', zombie1.health);
     console.log('zombie', zombie1);
-    if (zombie1.health == 0) {
-      zombie1.defeated == true
-    }
-    if (zombie1.defeated = true) {
+    if (zombie1.health <= 0) {
 
-      // document.getElementById('zombie1').innerHTML = '<img class="mech" src="assets/Mech.gif" alt="">'
+      // @ts-ignore
+      document.getElementById('zombie1').innerHTML = ''
     }
   }
   if (num == 2) {
-    zombie2.health--
+    zombie2.health -= army.attackPower
     console.log('zombie 2 health', zombie2.health);
+    console.log('zombie', zombie2);
+    if (zombie2.health <= 0) {
+
+      // @ts-ignore
+      document.getElementById('zombie2').innerHTML = ''
+    }
   }
   if (num == 3) {
-    zombie3.health--
+    zombie3.health -= army.attackPower
     console.log('zombie 3 health', zombie3.health);
+    console.log('zombie', zombie3);
+    if (zombie3.health <= 0) {
+
+      // @ts-ignore
+      document.getElementById('zombie3').innerHTML = ''
+    }
   }
+
   army.gold += army.attackPower
   // animateAttack()
   drawMech()
