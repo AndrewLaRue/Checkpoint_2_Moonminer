@@ -263,6 +263,10 @@ function drawSniper() {
 //#endregion
 
 
+
+
+
+
 startGame()
 
 // drawChopper()
